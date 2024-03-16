@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keansburg Park</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- bootstrap  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous" />
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+    <!-- header section start -->
+    <header>
+      <div id="menu-bar" class="fas fa-bars"></div>
+      <a href="index.html" class="logo"><span>Keans</span>burg Park</a>
+      <nav class="navbar">
+        <a href="#home"> Home</a>
+        <a href="#book"> book</a>
+        <a href="#about"> about</a>
+        <a href="#services"> services</a>
+        <a href="#gallery"> gallery</a>
+        <a href="#review"> review</a>
+        <a href="#features">Features</a>
+        <a href="#contact"> contact</a>
+      </nav>
+      <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+      </div>
+      <form action class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar" class="fas fa-search"></label>
+      </form>
+      
+
+      
+    </header>
+
+    <!-- header section end -->
+    <!-- login form  -->
+    <div class="login-form-container">
+      <i class="fas fa-time" id="form-close"></i>
+      <form action>
+        <h3>Login</h3>
+        <input type="email" class="box" placeholder="enter your email">
+        <input type="password" class="box" placeholder="enter your password">
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password <a href>Click here</a></p>
+        <p>don't have and account? <a href>Register now</a></p>
+      </form>
+    </div>
+
+    <!-- home section start  -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>adventure is worthwhile</h3>
+        <p>discover new places with us, adventure awaits</p>
+        <a href class="btn">Discover more</a>
+      </div>
+      <div class="controls">
+        <span class="vid-btn active" data-src="./assets/video_1.mp4"></span>
+        <span class="vid-btn " data-src="./assets/video_2.mp4"></span>
+        <span class="vid-btn" data-src="./assets/video_3.mp4"></span>
+      </div>
+      <div class="video-container">
+        <video src="assets/video (1080p)-1.mp4" id="video-slider" loop autoplay
+          muted></video>
+      </div>
+
+    </section>
+    <!-- booking form  -->
+    <section class="book" id="book">
+      <div class="container">
+        <div class="main-text">
+          <h1><span>B</span>ook</h1>
+        </div>
+        <div class="row">
+
+          <div class="col-md-6 py-3 py-md-0">
+            <div class="card">
+              <img src="./assets/booking form.jpg" alt>
+            </div>
+          </div>
+
+          <div class="col-md-6 py-3 py-md-0">
+            <form action="#">
+              <input type="text" class="form-control" placeholder="where to"
+                required><br>
+              <input type="text" class="form-control" placeholder="How Many"
+                required><br>
+              <input type="date" class="form-control" placeholder="Arrivals"
+                required><br>
+              <input type="date" class="form-control" placeholder="Leaving"
+                required><br>
+              <textarea class="form-control" rows="5" name="text"
+                placeholder="Enter Your Name & Details"></textarea>
+              <input type="submit" value="Book Now" class="submit" required>
+            </form>
+          </div>
+
+        </div>
+
+      </section>
+      <!-- booking form end  -->
+
+      <!-- Attractions section  -->
+      <section class="attraction" id="attraction"> <div class="main-txt"> <h1
+            class="park">Park Attractions</h1> </div>
+        <div class="containers">
+          <div class="row" style="margin-top: 30px;">
+
+            <div class="col-md-4 py-3 py-md-0"
+              style="justify-content:center;display:flex;">
+              <div class="cards" style="width: 18rem; height: 300px;">
+                <img src="./assets/park_1.webp " class="card-img-top" alt="...">
+                <div
+                style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                <h5 style="font-size: 1.5rem; color: #333;">01. Free Fall</h5>
+                <p style="color: #555; margin-bottom: 30px;">Some quick example text to build on
+                  the card title and make up the bulk of the card's
+                  content.</p> 
+                  <a href="#"
+                  style="background-color: #6c757d; color: #fff; padding: 5px 10px; border-radius: 5px; text-decoration: none;"
+                  data-bs-toggle="modal" data-bs-target="#m1">Add To Cart</a>
+              </div>
+              </div>
+              <!-- Modal for Free Fall attraction -->
+              <div class="modal fade" id="m1" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!-- Modal content -->
+              </div>
+            </div>
+
+            <div class="col-md-4 py-3 py-md-0"
+              style="justify-content:center;display:flex;">
+              <div class="cards" style="width: 18rem;">
+                <div class="img-cover-home">
+                  <img src="./assets/park_2.webp" class="card-img-top" alt="..."
+                    width="100%" height="150%">
+                </div>
+                <div
+                style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                <h5 style="font-size: 1.5rem; color: #333;">01. Free Fall</h5>
+                <p style="color: #555; margin-bottom: 30px;">Some quick example text to build on
+                  the card title and make up the bulk of the card's
+                  content.</p> 
+                  <a href="#"
+                  style="background-color: #6c757d; color: #fff; padding: 5px 10px; border-radius: 5px; text-decoration: none;"
+                  data-bs-toggle="modal" data-bs-target="#m1">Add To Cart</a>
+              </div>
+              </div>
+              <!-- Modal for Seesaw attraction -->
+              <div class="modal fade" id="m2" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!-- Modal content -->
+              </div>
+            </div>
+
+            <div class="col-md-4 py-3 py-md-0"
+              style="justify-content:center;display:flex;">
+              <div class="cards" style="width: 18rem; height: 300px;">
+                <img src="./assets/park_3.jpg " class="card-img-top" alt="...">
+                <div
+                style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                <h5 style="font-size: 1.5rem; color: #333;">01. Free Fall</h5>
+                <p style="color: #555; margin-bottom: 30px;">Some quick example text to build on
+                  the card title and make up the bulk of the card's
+                  content.</p> 
+                  <a href="#"
+                  style="background-color: #6c757d; color: #fff; padding: 5px 10px; border-radius: 5px; text-decoration: none;"
+                  data-bs-toggle="modal" data-bs-target="#m1">Add To Cart</a>
+              </div>
+              </div>
+              <!-- Modal for Free Fall attraction -->
+              <div class="modal fade" id="m1" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!-- Modal content -->
+              </div>
+            </div>
+
+            <div class="col-md-4 py-3 py-md-0"
+              style="justify-content:center;display:flex;">
+              <div class="cards" style="width: 18rem; height: 300px;">
+                <img src="./assets/park_4.jpg " class="card-img-top" alt="...">
+                <div
+                style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                <h5 style="font-size: 1.5rem; color: #333;">01. Free Fall</h5>
+                <p style="color: #555; margin-bottom: 30px;">Some quick example text to build on
+                  the card title and make up the bulk of the card's
+                  content.</p> 
+                  <a href="#"
+                  style="background-color: #6c757d; color: #fff; padding: 5px 10px; border-radius: 5px; text-decoration: none;"
+                  data-bs-toggle="modal" data-bs-target="#m1">Add To Cart</a>
+              </div>
+              </div>
+              <!-- Modal for Free Fall attraction -->
+              <div class="modal fade" id="m1" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!-- Modal content -->
+              </div>
+            </div>
+            <div class="col-md-4 py-3 py-md-0"
+              style="justify-content:center;display:flex;">
+              <div class="cards" style="width: 18rem; height: 300px;">
+                <img src="./assets/park_5.jpg " class="card-img-top" alt="...">
+                <div
+                style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                <h5 style="font-size: 1.5rem; color: #333;">01. Free Fall</h5>
+                <p style="color: #555; margin-bottom: 30px;">Some quick example text to build on
+                  the card title and make up the bulk of the card's
+                  content.</p> 
+                  <a href="#"
+                  style="background-color: #6c757d; color: #fff; padding: 5px 10px; border-radius: 5px; text-decoration: none;"
+                  data-bs-toggle="modal" data-bs-target="#m1">Add To Cart</a>
+              </div>
+              </div>
+              <!-- Modal for Free Fall attraction -->
+              <div class="modal fade" id="m1" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!-- Modal content -->
+              </div>
+            </div>
+            <div class="col-md-4 py-3 py-md-0"
+              style="justify-content:center;display:flex;">
+              <div class="cards" style="width: 18rem; height: 300px;">
+                <img src="./assets/park_6.webp " class="card-img-top" alt="...">
+                <div
+                  style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                  <h5 style="font-size: 1.5rem; color: #333;">01. Free Fall</h5>
+                  <p style="color: #555; margin-bottom: 30px;">Some quick example text to build on
+                    the card title and make up the bulk of the card's
+                    content.</p> 
+                    <a href="#"
+                    style="background-color: #6c757d; color: #fff; padding: 5px 10px; border-radius: 5px; text-decoration: none;"
+                    data-bs-toggle="modal" data-bs-target="#m1">Add To Cart</a>
+                </div>
+              </div>
+              <!-- Modal for Free Fall attraction -->
+              <div class="modal fade" id="m1" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!-- Modal content -->
+              </div>
+            </div>
+
+            <!-- Repeat the above structure for the remaining attractions -->
+
+          </div>
+        </div>
+      </section>
+      
+      
+
+      <!-- footer section start  -->
+
+      <!-- footer of the page -->
+      <!-- footer of the page -->
+      <footer id="footer">
+        <!-- footer holder of the page -->
+        <div class="footer-holder">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <h3 class="text-uppercase">Keansburg Park</h3>
+                <p>The water park is closed to the public.
+                  **Exclusive for WATERPARK only. There will be no amusement
+                  park or combination exclusive bookings*</p>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <h3 class="text-uppercase">Location</h3>
+                <!-- contact list of the page -->
+                <ul class="list-unstyled contact-list">
+                  <li>
+                    <span class="icon ti-location-pin"></span>
+                    <address>Keansburg Park
+
+                      Metro Star Gate
+
+                      Karachi Pakistan</address>
+                  </li>
+                  <li>
+                    <span class="icon ti-email"></span>
+                    <a href>Info @KeansburgAmusementPark.com</a>
+                  </li>
+                  <li>
+                    <span class="icon ti-headphone-alt"></span>
+                    <a href="tel:+92313-2532516">Phone: (732) 495-1400</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <h3 class="text-uppercase">Site Map</h3>
+                <!-- hour list of the page -->
+                <ul class="list-unstyled hour-list">
+                  <a href="home.html">Home</a><br>
+                  <a href="about.html">About us</a><br>
+                  <a href="feedback.html">Feedback</a><br>
+                  <a href="gallery.html">Gallery</a><br>
+                  <a href="faq.html">FAQ</a><br>
+                  <a href="bookme.html">Book Me</a><br>
+                  <a href="contact.html">Contact us</a><br>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <h3 class="text-uppercase">Subscribe</h3>
+                <p>Subscribe to our mailing list to get the updates to your
+                  email inbox.</p>
+                <!-- subscribe form of the page -->
+                <form action="#" class="subscribe-form">
+                  <fieldset>
+                    <input type="email" class="form-control"
+                      placeholder="your email here">
+                    <button type="submit"><i
+                        class="fa fa-paper-plane-o"></i></button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer area of the page -->
+        <div class="footer-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <p>Copyrights © 2024 All Rights Reserved.</p>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <!-- Socail network of the page -->
+                <ul class="socail-network list-unstyled">
+                  <li><a href="#" class="social_facebook"></a></li>
+                  <li><a href="#" class="social_linkedin"></a></li>
+                  <li><a href="#" class="social_twitter"></a></li>
+                  <li><a href="#" class="fa fa-google-plus"></a></li>
+                  <li><a href="#" class="social_pinterest"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- back top of the page -->
+
+      <!-- footer section end    -->
+
+      <script src="js/script.js"></script>
+    </body>
+
+  </html>
