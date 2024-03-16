@@ -148,9 +148,8 @@ body {
 }
 
 .login-form-container {
-    position: fixed;
-    display:none;
-    top: -120%;
+    position: absolute;
+    top: -120% !important;
     left: 0;
     z-index: 10000;
     min-height: 100vh;
@@ -162,7 +161,7 @@ body {
 }
 
 .login-form-container.active {
-    top: 0;
+    top: 0 !important;
 }
 
 .login-form-container form {
@@ -171,7 +170,51 @@ body {
     border-radius: .5rem;
     background: #fff;
     width: 50rem;
+    color:#000;
 }
+
+/* Hide the default checkbox */
+/* Remove specificity from the selector */
+input[type="checkbox"] {
+    margin: 0; /* Remove !important */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px; /* Set the width and height to your desired size */
+    height: 20px;
+    border: 2px solid #ccc; /* Border color */
+    border-radius: 4px; /* Optional: Round the corners */
+    outline: none; /* Remove the default focus outline */
+    cursor: pointer; /* Change cursor on hover */
+    vertical-align: middle; /* Align checkbox vertically with label */
+    position: relative; /* Adjust position for pseudo-element */
+}
+
+/* Define the appearance of the custom checkbox when it's checked */
+input[type="checkbox"]:checked::before {
+    content: "\2713"; /* Unicode character for check mark */
+    position: absolute; /* Position the tick mark */
+    top: 50%; /* Adjust vertical position */
+    left: 50%; /* Adjust horizontal position */
+    transform: translate(-50%, -50%); /* Center the tick mark */
+    width: 20px; /* Adjust width of the tick mark */
+    height: 20px; /* Adjust height of the tick mark */
+    font-size: 18px; /* Adjust font size of the tick mark */
+    text-align: center;
+    line-height: 18px; /* Adjust line height to match height */
+    color: #fff; /* Check mark color */
+    background-color: #007bff; /* Background color when checked */
+    border-radius: 2px; /* Optional: Round the corners */
+}
+
+/* Optional: Style the label text associated with the checkbox */
+label[for="remember"] {
+    margin-left: 5px; /* Adjust spacing between checkbox and label */
+    vertical-align: middle; /* Align label vertically with checkbox */
+}
+
+
+
 
 .login-form-container form h3 {
     font-size: 3rem;
@@ -245,7 +288,7 @@ body {
 .home {
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     justify-content: center;
     flex-flow: column;
     position: relative;
@@ -275,6 +318,7 @@ body {
     left: 0;
     z-index: -1;
     height: 70rem;
+    height: 100vh;
     width: 100%;
     object-fit: cover;
 }
@@ -302,153 +346,155 @@ body {
     
 }
 /* book section start   */
-.book{
+.book {
     background: #f9f9f9;
     padding: 50px;
 }
-.main-text h1{
+
+.main-text h1 {
     text-align: center;
     text-shadow: 0px 1px 1px black;
-    font-weight: 20rem;
+    font-weight: bold;
+    font-size: 36px;
 }
-.main-text h1 span{
+
+.main-text h1 span {
     color: #ffa500;
-}  
-.book .card{
+}
+
+.book .card {
     border-radius: 10px;
     box-shadow: 0px 5px 5px -6px black;
 }
-.card img{
-    display: block;
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
 }
-.book .row{
+
+.book .row {
     margin-top: 30px;
 }
-.book form input{
-    padding: 10px;
+
+.book form input,
+.book form textarea {
+    padding: 12px;
     color: black;
     border: none;
     outline: none;
     font-size: 15px;
     border-radius: 10px;
     box-shadow: 0px 5px 5px -6px black;
+    width: 100%;
+    margin-bottom: 15px;
 }
-.book form textarea{
-    border: none;
-    border-radius: 10px;
-    resize: none;
-    box-shadow: 0px 5px 5px -6px black;
-    height: 200px;
+
+.book form textarea {
+    height: 100px;
 }
-.book .submit{
+
+.book .submit {
     width: 160px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold;
     background: #ffa500;
     color: white;
-    margin-top: 10px;
-    transition: 0.5s;
-    border: .2rem solid orange;
+    border: 2px solid orange;
+    border-radius: 10px;
+    transition: width 0.5s, background 0.5s, color 0.5s;
 }
-.book .submit:hover{
+
+.book .submit:hover {
     width: 170px;
-    background: rgba(225, 225, 225, .2);
+    background: rgba(255, 165, 0, 0.2);
     color: orange;
-    
 }
+
   /* book section end  */
+
+/* about us start */
+
+.about-us-section {
+    padding: 50px 0;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.about-image img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* about us end */
+
   /* footer css start */
   #footer {
     overflow: hidden;
-  }
-  
-  #footer .footer-holder {
-    padding: 76px 0 63px;
+}
+
+#footer .footer-holder {
+    padding: 40px 0;
     overflow: hidden;
     background: #111;
     color: #acacac;
-  }
-  
-  #footer h3 {
+}
+
+#footer h3 {
     font-size: 18px;
     line-height: 20px;
     color: #fff;
     font-weight: 700;
-    margin: 0 0 31px;
-    padding: 0 0 14px;
+    margin: 0 0 20px;
+    padding: 0 0 10px;
     position: relative;
-  }
-  
-  #footer h3:before {
+}
+
+#footer h3:before {
     position: absolute;
     content: "";
     z-index: -1;
     left: 0;
-    top: auto;
     bottom: 0;
-    right: auto;
-    width: 60px;
+    width: 50px;
     height: 2px;
-    z-index: 0;
-  }
-  
-  #footer .contact-list {
-    overflow: hidden;
-    margin: 40px;
-    width: 10000vh;
+    background: #fff;
+}
 
-  }
-  
-  #footer .contact-list li {
-    overflow: hidden;
-    margin: 0 0 10px;
-  }
-  
-  #footer .contact-list .icon {
+#footer .contact-list,
+#footer .hour-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#footer .contact-list li,
+#footer .hour-list li {
+    margin-bottom: 10px;
+}
+
+#footer .contact-list .icon {
     font-size: 14px;
-    line-height: 16px;
-    display: inline-block;
-    vertical-align: top;
-    margin: 5px 10px 0 0;
-  }
-  
-  #footer .contact-list address {
-    display: inline-block;
-    vertical-align: top;
-    font-weight: 400;
-    font-style: normal;
-    margin: 0;
-  }
-  
-  #footer .contact-list a {
-    display: inline-block;
-    vertical-align: top;
+    margin-right: 10px;
     color: #acacac;
-    transition: all 0.25s linear;
-  }
-  
-  #footer .hour-list {
-    overflow: hidden;
-    margin: 0;
-  }
-  
-  #footer .hour-list li {
-    overflow: hidden;
-    margin: 0 0 10px;
-  }
-  
-  #footer .hour-list time {
-    display: block;
-  }
-  
-  #footer .subscribe-form {
-    width: 100%;
-    overflow: hidden;
+}
+
+#footer .subscribe-form {
+    margin-top: 20px;
     position: relative;
-    padding: 19px 0 0;
-  }
-  
-  #footer .subscribe-form .form-control {
+}
+
+#footer .subscribe-form .form-control {
     color: #5d5d5d;
     width: 100%;
     height: 46px;
@@ -457,52 +503,47 @@ body {
     outline: none;
     box-shadow: none;
     border-radius: 0;
-    padding: 6px 40px 6px 22px;
-  }
-  
-  #footer .subscribe-form button {
+    padding: 6px 22px;
+}
+
+#footer .subscribe-form button {
     position: absolute;
-    right: 20px;
-    top: 31px;
+    top: 0;
+    right: 0;
     font-size: 16px;
-    line-height: 18px;
     color: #5d5d5d;
     background: none;
-    padding: 0;
     border: none;
     outline: none;
-    border-radius: 0;
-    box-shadow: none;
-    transition: all 0.25s linear;
-  }
-  
-  #footer .subscribe-form button:hover {
+    transition: transform 0.25s ease;
+}
+
+#footer .subscribe-form button:hover {
     transform: rotate(30deg);
-  }
-  
-  #footer .footer-area {
-    padding: 10px 0 14px;
-    overflow: hidden;
-    background: #000;
-  }
-  
-  #footer .footer-area p {
+}
+
+#footer .footer-area {
+    padding: 20px 0;
+    background: #363636;
+    color:#fff;
+    text-align: center;
+}
+
+#footer .socail-network {
     margin: 0;
-  }
-  
-  #footer .socail-network {
-    float: right;
-    text-align: right;
+    padding: 0;
+    list-style: none;
+}
+
+#footer .socail-network li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#footer .socail-network a {
     color: #555;
-  }
-  
-  #footer .socail-network li {
-    margin: 0 0 0 39px;
-  }
-  
-  #footer .socail-network a {
-    color: #555;
-  }
+}
+
   
  /* footer css end  */
 
@@ -567,3 +608,43 @@ body {
     }
 }
 
+.cards {
+    width: 18rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #6c757d;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.btn:hover {
+    background-color: #495057;
+}
